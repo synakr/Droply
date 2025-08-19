@@ -1,2 +1,2 @@
-# droply
+# DROPLY
 Sometimes simple is Great
