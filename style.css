@@ -1,185 +1,287 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>BLTMR PLC 2.4.00</title>
-    <!-- Google Fonts for the retro terminal look -->
-    <link href="https://fonts.googleapis.com/css2?family=VT323&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="/style.css">
-</head>
-<body>
-    <div class="terminal-container glow-border">
-        <!-- Header Section -->
-        <div class="terminal-header">
-            <span>BLTMR PLC 2.4.00</span>
-            <span>POLICEMAN INFO:</span>
-        </div>
-
-        <!-- Navigation Tabs -->
-        <div class="terminal-nav" id="terminal-nav">
-            <span class="terminal-tab active" data-page="login-page">LOGIN</span>
-            <span class="terminal-tab" data-page="create-page">CREATE</span>
-            <span class="terminal-tab" data-page="chat-page">CHAT</span>
-            <span class="terminal-tab" data-page="contacts-page">CONTACTS</span>
-            <span class="terminal-tab" data-page="loc-page">LOC</span>
-            <span class="terminal-tab" data-page="documents-page">DOCUMENTS</span>
-            <span class="terminal-tab" data-page="orders-page">ORDERS</span>
-            <span class="terminal-tab" data-page="recordings-page">RECORDINGS</span>
-            <span class="terminal-tab" data-page="map-page">MAP</span>
-        </div>
-
-        <!-- Main Content Area - This container holds all pages -->
-        <div id="main-content-area">
-            <!-- LOGIN PAGE -->
-            <div id="login-page" class="content-page glow-border">
-                <form id="login-form">
-                    <p>USER AUTHENTICATION REQUIRED</p>
-                    <div class="input-field login">
-                        <label>USERNAME:</label>
-                        <input type="text" id="username-input" autocomplete="off" autocorrect="off" autocapitalize="off">
-                    </div>
-                    <div class="input-field login">
-                        <label>PASSWORD:</label>
-                        <input type="password" id="password-input">
-                    </div>
-                    <button type="submit" class="login-button">LOGIN</button>
-                    <div id="login-status" class="message-box hidden"></div>
-                </form>
-            </div>
-
-            <!-- CHAT PAGE - Now uses the main-content class for correct layout -->
-            <div id="chat-page" class="main-content hidden">
-                <!-- Left Panel (Chat & Input) -->
-                <div class="left-panel">
-                    <div class="chat-window glow-border" id="chat-window">
-                        <p class="chat-message">J. O'NEIL: WHAT THE FUCK DID I DO??</p>
-                        <p class="chat-message user">YOU: A LIFE, JIMMY. YOU KNOW WHAT THAT IS? IT'S THE SHIT THAT HAPPENS WHILE YOU'RE WAITING FOR MOMENTS THAT NEVER COME.</p>
-                        <p class="chat-message">J. O'NEIL: THATS SOME SPIDERMAN SHIT RIGHT THERE!!!</p>
-                        <p class="chat-message user">YOU: FUNNY THING IS THEY WERE ALL DEAD SERIOUS.</p>
-                    </div>
-                    <div class="input-area glow-border">
-                        <div class="input-field">
-                            <!-- <label></label> -->
-                            <!-- Removed the readonly attribute to allow physical keyboard input -->
-                            <input type="text" id="chat-input" value="DON'T THINK TOO MUCH ABOUT IT |">
-                        </div>
-                        <div class="keyboard-area">
-                            <button class="key-button" data-char="a">a</button>
-                            <button class="key-button" data-char="c">c</button>
-                            <button class="key-button" data-char="z">z</button>
-                            <button class="key-button" data-char="?">?</button>
-                            <button class="key-button" data-char="i">i</button>
-                            <button class="key-button" data-char="o">o</button>
-                            <button class="key-button" data-char="e">e</button>
-                            <button class="key-button" data-char="!">!</button>
-                            <button class="key-button" data-char="j">j</button>
-                            <button class="key-button" data-char="ñ">ñ</button>
-                            <button class="key-button" data-char="ü">ü</button>
-                            <button class="key-button" data-char="~">~</button>
-                            <button class="key-button" data-char="g">g</button>
-                            <button class="key-button" data-char="o">o</button>
-                            <button class="key-button" data-char="e">e</button>
-                            <button class="key-button" data-char="_">_</button>
-                            <button class="key-button" data-char="i">i</button>
-                            <button class="key-button" data-char="l">l</button>
-                            <button class="key-button" data-char="e">e</button>
-                            <button class="key-button" data-char="@">@</button>
-                            <button class="send-button" id="send-button">SEND</button>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Right Panel (Info) -->
-                <div class="right-panel">
-                    <div class="profile-section glow-border">
-                        <div class="profile-info">
-                            <span>OFFICER: A-34-D-1</span>
-                            <span>LEGAL NAME: JIM<br>O'NEIL</span>
-                            <span>SECURITY CODE:<br>48532695-OF</span>
-                            <span>PERSONAL WEAPON:<br>COLT M1911A1</span>
-                        </div>
-                        <!-- Tom Cruise image URL -->
-                        <img src="https://i0.wp.com/wpmedia.wonderwall.com/2021/05/09130111/shutterstock_editorial_1585851a.jpg?h=800" alt="Jim O'Neil's Profile Photo" class="profile-img">
-                    </div>
-                    <div class="bio-section glow-border">
-                        <p>O'NEIL WAS BORN TO IRISH-AMERICAN PARENTS IN THE LAURAVILLE NEIGHBORHOOD OF BALTIMORE, MARYLAND. HIS FATHER WORKED AS A STEELWORKER AT BETHLEHEM STEEL UNTIL OF INDUSTRIALIZATION LED TO HIS FIRING IN 1973. O'NEIL ATTENDED LOYOLA UNIVERSITY MARYLAND FOR A YEAR.</p>
-                        <p>HE JOINED THE BALTIMORE POLICE DEPARTMENT ON APRIL 5, 1994. HE WAS A PATROL OFFICER IN THE WESTERN DISTRICT UNDER THE COMMAND OF MAJOR HOWARD COLVIN FOR FOUR YEARS. HE SERVED FOR TWO YEARS IN THE ESCAPE AND APPREHENSION UNIT. IN 2000, O'NEIL HELPED DETECTIVE RAY COLE SOLVE A HOMICIDE CASE. HE WAS REASSIGNED TO THE HOMICIDE UNIT.</p>
-                    </div>
-                </div>
-            </div>
-
-            <!-- CONTACTS PAGE - Initially hidden -->
-            <div id="contacts-page" class="content-page hidden glow-border">
-                <p>CONTACTS LIST</p>
-                <p>-----------------------------------</p>
-                <p>1. O'NEIL, J. (Homicide)</p>
-                <p>2. COLVIN, H. (Major, Western District)</p>
-                <p>3. COLE, R. (Detective)</p>
-                <p>4. FREAMON, L. (Detective, Major Crimes)</p>
-                <p>5. GREGGS, K. (Detective, Narcotics)</p>
-                <p>-----------------------------------</p>
-                <p>MESSAGE: SELECT A CONTACT FOR MORE INFORMATION.</p>
-            </div>
-
-            <!-- LOC PAGE - Initially hidden -->
-            <div id="loc-page" class="content-page hidden glow-border">
-                <p>LOCATION LOGS</p>
-                <p>-----------------------------------</p>
-                <p>10/26/2025 09:30:45 | PINGED: 212 N CHARLES STREET</p>
-                <p>10/26/2025 10:15:22 | PINGED: WESTERN DISTRICT HQS</p>
-                <p>10/26/2025 11:40:01 | PINGED: 1045 E BALTIMORE ST</p>
-                <p>10/26/2025 12:05:58 | PINGED: JOHNS HOPKINS HOSPITAL</p>
-                <p>-----------------------------------</p>
-                <p>MESSAGE: LAST KNOWN LOCATIONS FOR UNIT A-34-D-1.</p>
-            </div>
-
-            <!-- DOCUMENTS PAGE - Initially hidden -->
-            <div id="documents-page" class="content-page hidden glow-border">
-                <span>
-                    <p>DOCUMENTS FOLDER</p>
-                    -----------------------------------
-                    FILE: HOMICIDE-988-2000-CASE.DOC
-                    FILE: PERSONNEL-O'NEIL-48532695.DOC
-                    FILE: BOLO-45-789.DOC (BE ON THE LOOKOUT)
-                    FILE: WARRANT-GRIFFITH-42.PDF
-                    -----------------------------------
-                    <p>MESSAGE: VIEWING DOCUMENTS REQUIRES A VALID R-KEY.</p>
-                </span>
-            </div>
-
-            <!-- Generic placeholder pages -->
-            <div id="orders-page" class="content-page hidden glow-border">
-                <p>ORDERS LOG</p>
-                <p>This is a placeholder for the orders page.</p>
-            </div>
-
-            <div id="recordings-page" class="content-page hidden glow-border">
-                <p>RECORDINGS LOG</p>
-                <p>This is a placeholder for the recordings page.</p>
-            </div>
-
-            <div id="map-page" class="content-page hidden glow-border">
-                <p>MAP VIEW</p>
-                <p>This is a placeholder for the map page.</p>
-            </div>
-
-            <!-- CREATE PAGE - Initially hidden -->
-            <div id="create-page" class="content-page hidden glow-border">
-                <p>CREATE NEW ACCOUNT</p>
-                <p>-----------------------------------</p>
-                <p>This is a placeholder for the account creation form.</p>
-            </div>
-
-        </div>
-
-        <!-- Footer Section -->
-        <div class="terminal-footer">
-            <span>LOW SIGNAL</span>
-            <span>PROPERTY OF BALTIMORE POLICE DEPARTMENT</span>
-        </div>
-    </div>
-
-    <script src="/script.js"></script>
-</body>
-</html>
+/* General body and container styling */
+body {
+    font-family: 'VT323', monospace;
+    background-color: #000;
+    color: #00ff00;
+    margin: 0;
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    box-sizing: border-box;
+    /* Creates the CRT screen effect with scanlines */
+    background-image: repeating-linear-gradient(
+        #000000 0px,
+        #000000 1px,
+        #00ff001a 1px,
+        #0000001a 2px
+    );
+}
+/* Container for the entire terminal UI */
+.terminal-container {
+    width: 100%;
+    max-width: 1200px;
+    height: 80vh;
+    max-height: 700px;
+    display: flex;
+    flex-direction: column;
+    border: 2px solid #00ff00;
+    box-shadow: 0 0 10px #00ff00;
+    padding: 10px;
+    box-sizing: border-box;
+    background-color: #000; /* Ensure the background is black */
+}
+/* Generic box-shadow for a glowing border effect */
+.glow-border {
+    border: 1px solid #00ff00;
+    box-shadow: 0 0 5px #00ff00;
+}
+/* A generic style for content sections */
+.content-page {
+    flex: 1;
+    padding: 10px;
+    overflow-y: auto;
+    white-space: pre-wrap;
+    scrollbar-width: none;
+    line-height: 1.2;
+}
+.content-page::-webkit-scrollbar {
+    display: none;
+}
+/* This class will be used to hide pages */
+.hidden {
+    display: none;
+}
+/* Header section with titles */
+.terminal-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 1.2rem;
+    padding-bottom: 5px;
+}
+/* Navigation tabs */
+.terminal-nav {
+    display: flex;
+    gap: 5px;
+    padding: 5px 0;
+    border-bottom: 1px solid #00ff00;
+    box-shadow: 0 1px 5px #00ff00;
+    margin-bottom: 10px;
+}
+.terminal-tab {
+    padding: 5px 10px;
+    cursor: pointer;
+    border: 1px solid transparent;
+    text-shadow: 0 0 2px #00ff00;
+    transition: all 0.2s ease;
+}
+.terminal-tab.active {
+    border: 1px solid #00ff00;
+    background-color: #00ff001a;
+    box-shadow: 0 0 5px #00ff00;
+}
+/* Main content area split into two columns - This is the corrected layout for chat page */
+.main-content {
+    flex: 1;
+    display: flex;
+    gap: 10px;
+    margin-bottom: 10px;
+}
+/* Left-side content (chat and input) */
+.left-panel {
+    flex: 2;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+/* Chat window */
+.chat-window {
+    flex: 1;
+    padding: 10px;
+    overflow-y: auto;
+    white-space: pre-wrap;
+    scrollbar-width: none; /* Firefox */
+}
+.chat-window::-webkit-scrollbar {
+    display: none; /* Chrome, Safari */
+}
+/* Reduced the margin for a tighter, more uniform look */
+.chat-message {
+    margin-bottom: 10px; /* Reduced from 10px */
+    line-height: 1.2;
+}
+.chat-message.user {
+    color: #00ffff; /* A slightly different color for user messages */
+}
+/* Input and virtual keyboard section */
+.input-area {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    gap: 10px;
+    padding: 10px;
+}
+.input-field {
+    display: flex;
+    gap: 5px;
+    align-items: center;
+}
+.input-field label {
+    white-space: nowrap;
+}
+.input-field input {
+    flex: 1;
+    background: transparent;
+    border: none;
+    color: #00ff00;
+    font-family: 'VT323', monospace;
+    font-size: 1.2rem;
+    padding: 5px;
+    outline: none;
+    text-shadow: 0 0 2px #00ff00;
+}
+/* Specific style for login inputs */
+.input-field.login input {
+    border: 1px solid #00ff00;
+    box-shadow: 0 0 3px #00ff00;
+}
+.input-field input:focus {
+    box-shadow: 0 0 5px #00ff00;
+}
+.keyboard-area {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 5px;
+}
+.key-button {
+    background-color: #000;
+    color: #00ff00;
+    border: 1px solid #00ff00;
+    box-shadow: 0 0 3px #00ff00;
+    padding: 2px 10px;
+    font-family: 'VT323', monospace;
+    font-size: 1rem;
+    cursor: pointer;
+    text-align: center;
+}
+.key-button:active {
+    box-shadow: 0 0 10px #00ff00;
+    background-color: #00ff00;
+    color: #000;
+}
+.send-button, .login-button {
+    grid-column: span 5;
+    text-align: center;
+    padding: 10px;
+    background-color: #000;
+    color: #00ff00;
+    border: 1px solid #00ff00;
+    box-shadow: 0 0 5px #00ff00;
+    font-family: 'VT323', monospace;
+    font-size: 1.2rem;
+    cursor: pointer;
+}
+.send-button:active, .login-button:active {
+    box-shadow: 0 0 10px #00ff00;
+    background-color: #00ff00;
+    color: #000;
+}
+/* Right-side content (info panel) */
+.right-panel {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+.profile-section {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding: 10px;
+    text-align: center;
+}
+.profile-info {
+    width: 100%;
+    margin-top: 10px;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    text-align: left;
+}
+.profile-img {
+    width: 100px;
+    height: 100px;
+    border: 1px solid #00ff00;
+    box-shadow: 0 0 5px #00ff00;
+    object-fit: cover;
+    object-position: center top; /* Focus on the face */
+    filter: sepia(100%) hue-rotate(90deg) saturate(300%);
+}
+.bio-section {
+    flex: 1;
+    padding: 10px;
+    overflow-y: auto;
+    line-height: 1.2;
+    scrollbar-width: none;
+    color: white;
+}
+.bio-section::-webkit-scrollbar {
+    display: none;
+}
+/* A simple message box for user feedback */
+.message-box {
+    padding: 10px;
+    text-align: center;
+    border: 1px solid #00ff00;
+    box-shadow: 0 0 5px #00ff00;
+    margin-top: 10px;
+}
+.message-box.error {
+    border-color: #ff0000;
+    color: #ff0000;
+    box-shadow: 0 0 5px #ff0000;
+}
+/* Footer section */
+.terminal-footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 0.9rem;
+    padding-top: 5px;
+    border-top: 1px solid #00ff00;
+    box-shadow: 0 -1px 5px #00ff00;
+}
+/* Responsive design for smaller screens */
+@media (max-width: 768px) {
+    .terminal-container {
+        height: 95vh;
+        padding: 10px;
+    }
+    .main-content {
+        flex-direction: column;
+        overflow-y: auto;
+    }
+    .right-panel {
+        flex-direction: row;
+        justify-content: space-around;
+        align-items: flex-start;
+    }
+    .profile-section {
+        flex: 1;
+    }
+    .bio-section {
+        flex: 2;
+    }
+    .keyboard-area {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    .send-button {
+        grid-column: span 5;
+    }
+    .profile-img {
+        width: 80px;
+        height: 80px;
+    }
+}
