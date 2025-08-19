@@ -1,4 +1,6 @@
 # Droply 🚀  
+**(Under development)**
+
 *A simple, temporary file sharing platform*  
 
 Droply is a lightweight web application that allows users to quickly upload files, access them from anywhere with a simple login, and have them automatically deleted after a short time. Think of it as your personal, no-hassle file vault.  
@@ -76,5 +78,3 @@ This project is licensed under the MIT License.
 ## Author 👨‍💻
 
 Developed by Md Sayan Akram – learning MERN & MySQL, building cool stuff.
-
-```
