@@ -98,6 +98,8 @@ body {
 }
 /* Chat window */
 .chat-window {
+    display: flex;
+    flex-direction: column;
     flex: 1;
     padding: 10px;
     overflow-y: auto;
@@ -120,6 +122,7 @@ body {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
+    align-items: center;
     gap: 10px;
     padding: 10px;
 }
@@ -127,7 +130,16 @@ body {
     display: flex;
     gap: 5px;
     align-items: center;
+    width: 70%;
+    height: 100%;
 }
+#chat-input{
+    height: 90%;
+}
+.ethan-white{
+    color: antiquewhite;
+}
+
 .input-field label {
     white-space: nowrap;
 }
@@ -138,9 +150,9 @@ body {
     color: #00ff00;
     font-family: 'VT323', monospace;
     font-size: 1.2rem;
-    padding: 5px;
     outline: none;
     text-shadow: 0 0 2px #00ff00;
+    box-shadow: 0 0 5px #00ff0020;
 }
 /* Specific style for login inputs */
 .input-field.login input {
@@ -202,8 +214,12 @@ body {
     padding: 10px;
     text-align: center;
 }
+.ethan-pic{
+    width: 50%;
+}
 .profile-info {
-    width: 100%;
+    flex: 1;
+    width: 50%;
     margin-top: 10px;
     display: flex;
     flex-direction: column;
@@ -211,8 +227,8 @@ body {
     text-align: left;
 }
 .profile-img {
-    width: 100px;
-    height: 100px;
+    width: 150px;
+    height: 150px;
     border: 1px solid #00ff00;
     box-shadow: 0 0 5px #00ff00;
     object-fit: cover;
