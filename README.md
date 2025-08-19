@@ -1,7 +1,22 @@
 # Droply 🚀  
 **(Under development)**
 
+[![GitHub stars](https://img.shields.io/github/stars/your-username/droply?style=social)](https://github.com/your-username/droply/stargazers)  
+[![GitHub forks](https://img.shields.io/github/forks/your-username/droply?style=social)](https://github.com/your-username/droply/network/members)  
+[![GitHub issues](https://img.shields.io/github/issues/your-username/droply)](https://github.com/your-username/droply/issues)  
+[![GitHub license](https://img.shields.io/github/license/your-username/droply)](LICENSE) 
+
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
+
+![License](https://img.shields.io/badge/license-MIT-green)  
+![Status](https://img.shields.io/badge/status-active-brightgreen)  
+![Made with Node.js](https://img.shields.io/badge/made%20with-Node.js-blue)  
+![Database](https://img.shields.io/badge/database-MySQL-orange)
+
 *A simple, temporary file sharing platform*  
+
+Droply is a lightweight and fast file-sharing platform designed for quick access.  
+No Google Drive. No hassle. Just upload your files, set a short expiry, and download them from anywhere.
 
 Droply is a lightweight web application that allows users to quickly upload files, access them from anywhere with a simple login, and have them automatically deleted after a short time. Think of it as your personal, no-hassle file vault.  
 
@@ -78,3 +93,5 @@ This project is licensed under the MIT License.
 ## Author 👨‍💻
 
 Developed by Md Sayan Akram – learning MERN & MySQL, building cool stuff.
+
+---
