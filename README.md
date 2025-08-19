@@ -1,12 +1,7 @@
-Here’s a clean **README.md** for your GitHub repo:
-
-````markdown
 # Droply 🚀  
 *A simple, temporary file sharing platform*  
 
 Droply is a lightweight web application that allows users to quickly upload files, access them from anywhere with a simple login, and have them automatically deleted after a short time. Think of it as your personal, no-hassle file vault.  
-
----
 
 ## Features ✨
 - 🔑 Simple username + password based login  
@@ -15,16 +10,12 @@ Droply is a lightweight web application that allows users to quickly upload file
 - 🌍 Accessible from any device, anywhere  
 - 🗑️ Files auto-deleted after expiry  
 
----
-
 ## Tech Stack 🛠️
 - **Backend:** Node.js + Express  
 - **Database:** MySQL  
 - **Frontend:** HTML, CSS, JavaScript (basic)  
 - **File Handling:** Multer  
 - **Authentication:** bcrypt (password hashing), JWT  
-
----
 
 ## Installation ⚡
 
@@ -84,9 +75,6 @@ This project is licensed under the MIT License.
 
 ## Author 👨‍💻
 
-Developed by \[Your Name] – learning MERN & MySQL, building cool stuff.
+Developed by Md Sayan Akram – learning MERN & MySQL, building cool stuff.
 
-```
-
-Would you like me to also include **badges** (like build status, license, stars, etc.) to make your README look more professional?
 ```
