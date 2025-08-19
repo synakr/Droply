@@ -15,10 +15,8 @@
 
 *A simple, temporary file sharing platform*  
 
-Droply is a lightweight and fast file-sharing platform designed for quick access.  
-No Google Drive. No hassle. Just upload your files, set a short expiry, and download them from anywhere.
-
 Droply is a lightweight web application that allows users to quickly upload files, access them from anywhere with a simple login, and have them automatically deleted after a short time. Think of it as your personal, no-hassle file vault.  
+No Google Drive. No hassle. Just upload your files, set a short expiry, and download them from anywhere.
 
 ## Features ✨
 - 🔑 Simple username + password based login  
