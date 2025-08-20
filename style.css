@@ -69,6 +69,7 @@ body {
     border-bottom: 1px solid #00ff00;
     box-shadow: 0 1px 5px #00ff00;
     margin-bottom: 10px;
+    flex-wrap: wrap;
 }
 .terminal-tab {
     padding: 5px 10px;
@@ -274,6 +275,7 @@ body {
     .terminal-container {
         height: 95vh;
         padding: 10px;
+        /* overflow-y: auto; */
     }
     .main-content {
         flex-direction: column;
@@ -283,6 +285,11 @@ body {
         flex-direction: row;
         justify-content: space-around;
         align-items: flex-start;
+        text-wrap: wrap;
+        width: 100%;
+    }
+    .left-panel{
+        width: 100%;
     }
     .profile-section {
         flex: 1;
@@ -291,10 +298,10 @@ body {
         flex: 2;
     }
     .keyboard-area {
-        grid-template-columns: repeat(2, 1fr);
+        grid-template-columns: repeat(4, 1fr);
     }
     .send-button {
-        grid-column: span 5;
+        grid-column: span 4;
     }
     .profile-img {
         width: 80px;
