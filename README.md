@@ -95,12 +95,14 @@ npm start
 
 ## License 📄
 
-This project is licensed under the MIT License.
+This project is licensed under the **MIT License**.
+
 ---
 
 ## Author 👨‍💻
 
-Developed by Md Sayan Akram – learning MERN & MySQL, building cool stuff.
+Developed by **Md Sayan Akram** – learning MERN & MySQL, building cool stuff.
 
-*Caffine and codes forever✨*
+*Caffine and Codes Forever✨*
+
 ---
