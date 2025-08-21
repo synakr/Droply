@@ -32,14 +32,17 @@ No Google Drive. No hassle. Just upload your files, set a short expiry, and down
 - 📂 Upload and download files from anywhere  
 - ⏳ Automatic file expiry (1–2 days)  
 - 🌍 Accessible from any device, anywhere  
+- 🤖 Ethan Hunt-style AI chat bot guidance  
 - 🗑️ Files auto-deleted after expiry  
+- 🎬 Mission Impossible themed interface  
 
 ## Tech Stack 🛠️
-- **Backend:** Node.js + Express  
+- **Backend:** Node.js + Express (hosted on **Vercel**)  
 - **Database:** MySQL  
 - **Frontend:** HTML, CSS, JavaScript (basic)  
 - **File Handling:** Multer  
 - **Authentication:** bcrypt (password hashing), JWT  
+- **AI Chat Bot:** DeepSeek API 
 
 ## Installation ⚡
 
@@ -71,11 +74,12 @@ DB_NAME=droply
 JWT_SECRET=supersecretkey
 ```
 
-5. Run the server
+5. Run the server locally (optional)
 
 ```bash
 npm start
 ```
+   Note: Backend is hosted on `Vercel`, so you can also directly use the deployed API endpoints without running locally.
 
 6. Open frontend
    Open `index.html` in your browser or host it using any static server.
