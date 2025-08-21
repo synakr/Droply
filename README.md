@@ -96,11 +96,10 @@ npm start
 ## License 📄
 
 This project is licensed under the MIT License.
-*Caffine and codes forever✨"
 ---
 
 ## Author 👨‍💻
 
 Developed by Md Sayan Akram – learning MERN & MySQL, building cool stuff.
-
+*Caffine and codes forever✨*
 ---
