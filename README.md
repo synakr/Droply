@@ -18,6 +18,15 @@
 Droply is a lightweight web application that allows users to quickly upload files, access them from anywhere with a simple login, and have them automatically deleted after a short time. Think of it as your personal, no-hassle file vault.  
 No Google Drive. No hassle. Just upload your files, set a short expiry, and download them from anywhere.
 
+
+## Major Update: AI Chat Bot Integration 🤖
+- Integrated **DeepSeek AI Chat Bot** for an interactive experience.  
+- Chat bot speaks like **Ethan Hunt**, giving guidance and tips while you navigate Droply.  
+- Completely **free to use** through the platform.  
+- Enhances the **Mission Impossible theme**, making your file-sharing experience more thrilling.  
+
+
+
 ## Features ✨
 - 🔑 Simple username + password based login  
 - 📂 Upload and download files from anywhere  
@@ -73,12 +82,14 @@ npm start
 
 ---
 
+
 ## Future Improvements 🚧
 
 * Cloud storage integration (AWS S3, GCP, etc.)
 * Better UI with React or Vue
 * End-to-end encryption for files
 * Expiry notifications
+* Better AI personality customization
 
 ---
 
