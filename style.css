@@ -275,16 +275,16 @@ body {
     .terminal-container {
         height: 95vh;
         padding: 10px;
-        /* overflow-y: auto; */
+        overflow-y: auto;
     }
     .main-content {
         flex-direction: column;
         overflow-y: auto;
     }
     .right-panel {
-        flex-direction: row;
+        flex-direction: column;
         justify-content: space-around;
-        align-items: flex-start;
+        align-items: center;
         text-wrap: wrap;
         width: 100%;
     }
@@ -298,7 +298,23 @@ body {
         flex: 2;
     }
     .keyboard-area {
+        margin-right: 10px;
         grid-template-columns: repeat(4, 1fr);
+    }
+    .input-area {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+        gap: 10px;
+        padding: 10px;
+    }
+    .input-field {
+        width: 80%;
+        height: 100%;
+    }
+    #chat-input{
+        height: 90%;
     }
     .send-button {
         grid-column: span 4;
