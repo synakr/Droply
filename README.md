@@ -101,5 +101,6 @@ This project is licensed under the MIT License.
 ## Author 👨‍💻
 
 Developed by Md Sayan Akram – learning MERN & MySQL, building cool stuff.
+
 *Caffine and codes forever✨*
 ---
