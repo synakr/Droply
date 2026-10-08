@@ -2,6 +2,7 @@ export type PageId =
   | "login-page"
   | "create-page"
   | "chat-page"
+  | "files-page"
   | "contacts-page"
   | "loc-page"
   | "documents-page"

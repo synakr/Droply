@@ -11,6 +11,7 @@ const TABS: { id: PageId; label: string }[] = [
   { id: "login-page", label: "LOGIN" },
   { id: "create-page", label: "CREATE" },
   { id: "chat-page", label: "CHAT" },
+  { id: "files-page", label: "FILES" },
   { id: "contacts-page", label: "CONTACTS" },
   { id: "loc-page", label: "LOC" },
   { id: "documents-page", label: "DOCUMENTS" },
@@ -27,7 +28,10 @@ export const Navbar: React.FC<NavbarProps> = ({
   return (
     <div className="flex gap-1 py-1 border-b border-[#00ff00] shadow-[0_1px_5px_#00ff00] mb-2.5 flex-wrap font-mono text-sm sm:text-base">
       {TABS.map((tab) => {
-        if (isLoggedIn && (tab.id === "login-page" || tab.id === "create-page")) {
+        if (
+          (isLoggedIn && (tab.id === "login-page" || tab.id === "create-page")) ||
+          (!isLoggedIn && tab.id !== "login-page" && tab.id !== "create-page")
+        ) {
           return null;
         }
 

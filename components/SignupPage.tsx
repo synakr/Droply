@@ -3,11 +3,11 @@
 import React, { useState } from "react";
 import { supabase } from "@/lib/supabase/client";
 
-interface LoginPageProps {
+interface SignupPageProps {
   onSuccess: () => void;
 }
 
-export const LoginPage: React.FC<LoginPageProps> = ({ onSuccess }) => {
+export const SignupPage: React.FC<SignupPageProps> = ({ onSuccess }) => {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [isSubmitting, setIsSubmitting] = useState(false);
@@ -21,7 +21,7 @@ export const LoginPage: React.FC<LoginPageProps> = ({ onSuccess }) => {
     setIsSubmitting(true);
     setStatus(null);
 
-    const { error } = await supabase.auth.signInWithPassword({
+    const { data, error } = await supabase.auth.signUp({
       email,
       password,
     });
@@ -33,14 +33,22 @@ export const LoginPage: React.FC<LoginPageProps> = ({ onSuccess }) => {
       return;
     }
 
-    setStatus({ text: "AUTHENTICATION SUCCESSFUL.", isError: false });
-    onSuccess();
+    if (data.session) {
+      setStatus({ text: "ACCOUNT CREATED.", isError: false });
+      onSuccess();
+      return;
+    }
+
+    setStatus({
+      text: "ACCOUNT CREATED. CHECK YOUR EMAIL TO CONFIRM.",
+      isError: false,
+    });
   };
 
   return (
     <div className="flex-1 p-3 overflow-y-auto glow-border font-mono text-[#00ff00]">
       <form onSubmit={handleSubmit} className="flex flex-col gap-3 max-w-sm">
-        <p className="text-lg">USER AUTHENTICATION REQUIRED</p>
+        <p className="text-lg">CREATE USER ACCOUNT</p>
         <div className="flex gap-2 items-center">
           <label className="whitespace-nowrap">EMAIL:</label>
           <input
@@ -60,7 +68,8 @@ export const LoginPage: React.FC<LoginPageProps> = ({ onSuccess }) => {
             type="password"
             value={password}
             onChange={(e) => setPassword(e.target.value)}
-            autoComplete="current-password"
+            autoComplete="new-password"
+            minLength={6}
             required
             className="flex-1 bg-transparent border border-[#00ff00] text-[#00ff00] font-mono text-xl outline-none shadow-[0_0_3px_#00ff00] focus:shadow-[0_0_5px_#00ff00] px-1"
           />
@@ -70,7 +79,7 @@ export const LoginPage: React.FC<LoginPageProps> = ({ onSuccess }) => {
           disabled={isSubmitting}
           className="p-2 bg-black text-[#00ff00] border border-[#00ff00] shadow-[0_0_5px_#00ff00] font-mono text-xl cursor-pointer active:bg-[#00ff00] active:text-black transition-colors"
         >
-          {isSubmitting ? "AUTHENTICATING..." : "LOGIN"}
+          {isSubmitting ? "PROVISIONING..." : "CREATE ACCOUNT"}
         </button>
         {status && (
           <div
