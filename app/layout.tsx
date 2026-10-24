@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { VT323 } from "next/font/google";
 import "./globals.css";
+import { VaultProvider } from "@/context/VaultContext";
 
 const vt323 = VT323({
   weight: "400",
@@ -21,9 +22,8 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${vt323.variable} antialiased bg-black text-[#00ff00] selection:bg-[#00ff00] selection:text-black`}
-      >
-        {children}
+        className={`${vt323.variable} antialiased bg-black text-[#00ff00] selection:bg-[#00ff00] selection:text-black`}>
+        <VaultProvider>{children}</VaultProvider>
       </body>
     </html>
   );
